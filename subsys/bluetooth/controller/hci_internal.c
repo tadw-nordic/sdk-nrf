@@ -844,6 +844,9 @@ static uint8_t vs_cmd_put(uint8_t const * const cmd,
 	case SDC_HCI_OPCODE_CMD_VS_EVENT_LENGTH_SET:
 		return sdc_hci_cmd_vs_event_length_set((void *)cmd_params);
 
+	case  SDC_HCI_OPCODE_CMD_VS_SWITCH_TO_CODED_PHY:
+		return sdc_hci_cmd_vs_switch_to_coded_phy((void *)cmd_params);
+
 	default:
 		return BT_HCI_ERR_UNKNOWN_CMD;
 	}
